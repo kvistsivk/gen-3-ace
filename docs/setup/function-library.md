@@ -106,19 +106,35 @@ hexadecimal.
 
 ### `WriteBoxName`
 
-
+This function writes a value to a box name, either in decimal or hexadecimal.
 
 --8<-- "library/jolteon.md"
 
 ### `WriteBoxNameMulti`
 
+Functions similarly to `ReadBoxNameMulti`, though it instead writes box names
+via `WriteBoxName`. It uses the same packed bit array to specify numeric bases.
+
 --8<-- "library/flareon.md"
 
 ### `WriteBoxNamePrefixed`
 
+This function is _mostly_ just used by `WriteBoxNameStats`, but has other uses
+too. It prints a value as a decimal integer, but also prefixes a 3 character
+string to the front of it. An example might be something like `ABC 5`.
+
 --8<-- "library/espeon.md"
 
 ### `WriteBoxNameStats`
+
+This function takes in an array of 6 values, and prints them to the first 6
+box names as decimal integers. These 6 values are meant to be Pokémon
+stat-related, and each will be prefixed with an abbreviation for its respective
+stat.
+
+If the array passed in contains `[12, 8, 3, 0, 44, 129]`, the box names would
+be `HP  12`, `Atk 8`, `Def 3`, `Spe 0`, `SpA 44`, & `SpD 129`. Not that speed
+comes between defense & special attack, not at the end.
 
 --8<-- "library/umbreon.md"
 
