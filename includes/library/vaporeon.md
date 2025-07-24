@@ -88,8 +88,8 @@ F0 BC 01 BC   00 47 00 00
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
+    B(ParseGfChar)
+    C(ReadBoxName)
 
     A --> C
     C --> B

@@ -81,8 +81,8 @@ D7 01 9E 46   00 F8 00 20
 ```mermaid
 flowchart LR
     A((( )))
-    B(Jolteon)
-    C(Flareon)
+    B(WriteBoxName)
+    C(WriteBoxNameMulti)
 
     A --> B
     B -.-> C

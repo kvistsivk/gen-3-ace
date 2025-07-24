@@ -26,7 +26,7 @@ DD D8 02 02     .byte   "id", #0x02, #0x02
 12 01
 48 33           ADD     r3, #0x48
 D2 58           LDR     r2, [r2, r3]
-07 9B           LDR     r3, sp.jolteon
+07 9B           LDR     r3, sp.WriteBoxName
 9E 46           CPY     lr, r3
 00 F8           BL      lr
 00 20           MOV     r0, #0
@@ -115,8 +115,8 @@ Not available
 ```mermaid
 flowchart LR
     A((( )))
-    B(Jolteon)
-    C(Flareon)
+    B(WriteBoxName)
+    C(WriteBoxNameMulti)
 
     A --> B
     B -.-> C

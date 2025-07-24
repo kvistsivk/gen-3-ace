@@ -264,7 +264,7 @@ C7 FF 41 1C   08 D0 00 2C
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
+    B(ReadGfChar)
 
     A --> B
 ```

@@ -61,6 +61,7 @@ Box 13: yi FI Q0 AA
 Box 14: QE QA AA AA
 ```
 /////
+
 ////
 
 //// tab | :octicons-apps-24: PokeGlitzer
@@ -95,8 +96,8 @@ CA 21 48 43   40 00 40 44
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
+    B(ParseGfChar)
+    C(ReadBoxName)
 
     A --> C
     C --> B

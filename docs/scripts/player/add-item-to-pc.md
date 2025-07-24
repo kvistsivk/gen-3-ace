@@ -16,7 +16,7 @@ C1 D9 E8 C3     .byte   "GetI"
 E8 D9 E1 FF     .byte   "tem", #0xFF
 01 21           MOV     r1, #1
 02 22           MOV     r2, #2
-08 9B           LR      r3, sp.vaporeon
+08 9B           LR      r3, sp.ReadBoxNameMulti
 9E 46           CPY     lr, r3
 00 F8           BL      lr
 02 E0           B       #8
@@ -213,9 +213,9 @@ B1 A3 09 08   00 00 00 00
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
-    D(Vaporeon)
+    B(ParseGfChar)
+    C(ReadBoxName)
+    D(ReadBoxNameMulti)
 
     A --> D
     D --> C

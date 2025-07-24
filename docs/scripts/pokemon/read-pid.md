@@ -82,8 +82,8 @@ CC D9 D5 D8   CA DD D8 FF
 ```mermaid
 flowchart LR
     A((( )))
-    B(Jolteon)
-    C(Flareon)
+    B(WriteBoxName)
+    C(WriteBoxNameMulti)
 
     A --> B
     B -.-> C

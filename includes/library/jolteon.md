@@ -111,7 +111,7 @@ F5 D5 01 BC   00 47 00 00
 ```mermaid
 flowchart LR
     A((( )))
-    B(Flareon)
+    B(WriteBoxNameMulti)
 
     A -.-> B
     B --> A

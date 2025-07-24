@@ -161,9 +161,9 @@ Not available
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
-    D(Vaporeon)
+    B(ParseGfChar)
+    C(ReadBoxName)
+    D(ReadBoxNameMulti)
 
     A --> D
     D --> C

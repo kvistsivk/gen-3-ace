@@ -18,7 +18,7 @@ to that value mod 256.
 03 E0           B       #10
 CD D9 E8 BF     .byte   "SetE"
 EA E7 FF FF     .byte   "vs", #0xFF, #0xFF
-0C 9B           LDR     r3, sp.vaporeon
+0C 9B           LDR     r3, sp.ReadBoxNameMulti
 02 42           NOP
 00 21           MOV     r1, #0
 06 22           MOV     r2, #6
@@ -182,10 +182,12 @@ F3 F7 01 35   20 2D F1 D3
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
+    B(ParseGfChar)
+    C(ReadBoxName)
+    D(ReadBoxNameMulti)
 
-    A --> C
+    A --> D
+    D --> C
     C --> B
 ```
 ////

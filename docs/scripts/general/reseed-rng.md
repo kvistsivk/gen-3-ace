@@ -15,7 +15,7 @@ useful for RNG manipulation, useless otherwise.
 CC D9 E7 D9     .byte   "Rese"
 D9 D8 CC E2     .byte   "edRn"
 DB FF 02 02     .byte   "g", #0xFF, #0x02, #0x02
-05 9A           LDR     r2, sp.eevee
+05 9A           LDR     r2, sp.ReadBoxName
 96 46           CPY     lr, r2
 00 F8           BL      lr
 02 E0           B       #8
@@ -121,8 +121,8 @@ B1 01 02 49   08 60 00 20
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu)
-    C(Eevee)
+    B(ParseGfChar)
+    C(ReadBoxName)
 
     A --> C
     C --> B

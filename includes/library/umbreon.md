@@ -90,7 +90,7 @@ BB CD E4 BE   00 00 00 00
 ```mermaid
 flowchart LR
     A((( )))
-    B(Espeon)
+    B(WriteBoxNamePrefixed)
 
     A --> B
 ```

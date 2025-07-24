@@ -95,7 +95,7 @@ A9 40 76 18   40 08 01 21
 ```mermaid
 flowchart LR
     A((( )))
-    B(Espeon)
+    B(WriteBoxNamePrefixed)
 
     A --> B
 ```

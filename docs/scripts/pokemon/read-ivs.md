@@ -175,8 +175,8 @@ B6 46 00 E0   14 0A 00 F8
 ```mermaid
 flowchart LR
     A((( )))
-    B(Espeon)
-    C(Umbreon)
+    B(WriteBoxNamePrefixed)
+    C(WriteBoxNameStats)
 
     A --> C
     C --> B

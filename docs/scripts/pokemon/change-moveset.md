@@ -16,7 +16,7 @@ CD D9 E8 C7     .byte   "SetM"
 E3 EA D9 E7     .byte   "oves"
 D9 E8 02 02     .byte   "et", #0x02, #0x02
 04 22           MOV     r2, #4
-0A 9B           LDR     r3, sp.vaporeon
+0A 9B           LDR     r3, sp.ReadBoxNameMulti
 9E 46           CPY     lr, r3
 00 E0           B       #4
 C1 D0
@@ -177,9 +177,9 @@ A8 91 01 35   03 2D F2 D9
 ```mermaid
 flowchart LR
     A((( )))
-    B(Pikachu
-    C(Eevee)
-    D(Vaporeon)
+    B(ParseGfChar)
+    C(ReadBoxName)
+    D(ReadBoxNameMulti)
 
     A --> D
     D --> C

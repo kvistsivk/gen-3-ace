@@ -16,7 +16,7 @@ CA E0 E6 CD     .byte   "PlrS"
 DD D8 02 02     .byte   "id", #0x02, #0x02
 02 9A           LDR     r2, sp.gSaveBlock2
 92 89           LDRH    r2, [r2, #12]
-07 9B           LDR     r3, sp.jolteon
+07 9B           LDR     r3, sp.WriteBoxName
 02 E0           B       #8
 AC C6
 00 00
@@ -81,8 +81,8 @@ C8 01 9E 46   00 F8 00 20
 ```mermaid
 flowchart LR
     A((( )))
-    B(Jolteon)
-    C(Flareon)
+    B(WriteBoxName)
+    C(WriteBoxNameMulti)
 
     A --> B
     B -.-> C

@@ -222,7 +222,7 @@ F0 BC 01 BC   00 47 00 00
 ```mermaid
 flowchart LR
     A((( )))
-    B(Jolteon)
+    B(WriteBoxName)
 
     A --> B
     B -.-> A
