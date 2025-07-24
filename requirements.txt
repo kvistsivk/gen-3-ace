@@ -1,0 +1,10 @@
+pk-lexers @ git+https://github.com/kvistsivk/pk-lexers@trunk
+
+jinja2~=3.0
+markdown~=3.2
+markdown-grid-tables~=0.4.0
+mkdocs~=1.6
+mkdocs-material~=9.6
+mkdocs-material-extensions~=1.3
+pygments~=2.16
+pymdown-extensions~=10.16

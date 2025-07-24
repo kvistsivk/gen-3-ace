@@ -1,0 +1,144 @@
+site_name: Generation 3 ACE
+site_url: https://kvistsivk.github.io/gen-3-ace/
+theme:
+  name: material
+  favicon: assets/favicon.png
+  icon:
+    logo: material/pokeball
+    admonition:
+      warning: material/exclamation-thick
+  palette:
+    - scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  font:
+    text: Nunito Sans
+    code: Fira Code
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+
+plugins:
+  - search
+
+nav:
+  - Home:
+    - index.md
+    - Changelog: changelog.md
+  - Setup:
+    - Overview: setup/overview.md
+    - Before you start: setup/before-you-start.md
+    - Bootstrapping our environment: setup/bootstrapping-our-environment.md
+    - Replacing the hex writer: setup/replacing-the-hex-writer.md
+    - Function library: setup/function-library.md
+  - Scripts:
+    - General/utility:
+      - Reseed RNG: scripts/general/reseed-rng.md
+      - Reset move tutors: scripts/general/reset-move-tutors.md
+      - Customize mass outbreak: scripts/general/customize-mass-outbreak.md
+      - Wipe/erase box 1: scripts/general/wipe-box-1.md
+      - Reset box names: scripts/general/reset-box-names.md
+      - Set ObjectEvent script pointer: scripts/general/set-objectevent-script-pointer.md
+      - Toggle music on/off: scripts/general/toggle-music-on-off.md
+    - Player manipulation:
+      - Read SID: scripts/player/read-sid.md
+      - Change TID/SID: scripts/player/change-tid-sid.md
+      - Change name: scripts/player/change-name.md
+      - Swap gender: scripts/player/swap-gender.md
+      - Max out money/coins: scripts/player/max-out-money-coins.md
+      - Add item to PC: scripts/player/add-item-to-pc.md
+      - Fill case with perfect Pokéblocks: scripts/player/add-perfect-pokeblocks.md
+    - Pokémon manipulation:
+      - Read PID: scripts/pokemon/read-pid.md
+      - Read EVs: scripts/pokemon/read-evs.md
+      - Read IVs: scripts/pokemon/read-ivs.md
+      - Read OT SID: scripts/pokemon/read-ot-sid.md
+      - Change OT name: scripts/pokemon/change-ot-name.md
+      - Swap OT gender: scripts/pokemon/swap-ot-gender.md
+      - Change level: scripts/pokemon/change-level.md
+      - Change EVs: scripts/pokemon/change-evs.md
+      - Change moveset: scripts/pokemon/change-moveset.md
+      - Calculate Hidden Power stats: scripts/pokemon/calculate-hidden-power-stats.md
+      - Read daycare egg PID: scripts/pokemon/read-daycare-egg-pid.md
+    - Static encounters:
+      - Respawn Mew duo: scripts/static-encounters/respawn-mew-duo.md
+      - Respawn legendary birds: scripts/static-encounters/respawn-legendary-birds.md
+      - Respawn tower duo: scripts/static-encounters/respawn-tower-duo.md
+      - Respawn weather trio: scripts/static-encounters/respawn-weather-trio.md
+      - Respawn legendary giants: scripts/static-encounters/respawn-legendary-giants.md
+      - Respawn roamer: scripts/static-encounters/respawn-roamer.md
+      - Respawn Souther Island Lati: scripts/static-encounters/respawn-southern-island-lati.md
+      - Respawn Deoxys: scripts/static-encounters/respawn-deoxys.md
+      - Respawn starters: scripts/static-encounters/respawn-starters.md
+  - Data tables:
+    - Pokémon: data/pokemon.md
+    - Pokémon struct fields: data/pokemon-struct-fields.md
+    - Moves: data/moves.md
+    - Items: data/items.md
+    - Maps: data/maps.md
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - markdown_grid_tables
+  - md_in_html
+  - pymdownx.blocks.admonition:
+      types:
+        - warning
+  - pymdownx.blocks.caption
+  - pymdownx.blocks.details:
+      types:
+        - pokemon
+        - question
+  - pymdownx.blocks.html
+  - pymdownx.blocks.tab:
+      alternate_style: true
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.fancylists
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - includes
+      auto_append:
+        - append.md
+  - pymdownx.striphtml
+  - pymdownx.superfences:
+      preserve_tabs: true
+      relaxed_headers: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
+
+extra_css:
+  - assets/stylesheets/admonition.css
+  - assets/stylesheets/general.css
+  - assets/stylesheets/syntax.css
+  - assets/stylesheets/table.css
+
+watch:
+  - includes
