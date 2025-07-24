@@ -68,21 +68,21 @@ Let's go over what's happening here step-by-step:
     gate[^2]. This only acts as a no-op when run in ARM mode; in Thumb mode, it will
     switch to ARM mode and jump to the next instruction. Now we've harmonized
     around a single execution mode
-2.  We push all of our registers other than `sp` & `lr` to the stack. We're
-    going to need to return to the main game loop with these unchanging since
-    the triggering of ACE, and storing them in this way allows us to make use of
-    all registers during script execution
+2.  We push all of our registers other than `sp` & `lr` to the stack. When we
+    return to the main game loop, we're going to need these registers to contain
+    the values they had we ACE was first triggered. Storing them in this way
+    also allows us to make use of all registers during script execution
 3.  We prepare to jump to some Thumb code by manually calculating a
     `pc`‑relative offset, but note that we also clear the second least
-    significant bit. This is so that we can ensure that our `pc` is aligned
+    significant bit. This is so that we can ensure that our `pc` is aligned[^3]
 4.  We determine the size of our function library and allocate enough space on
     the stack for the addresses of that many functions, plus 4 extra slots
-5.  We derefence the global pointers to all 3 ASLR-affected data structures[^3]
+5.  We derefence the global pointers to all 3 ASLR-affected data structures[^4]
     & store their addresses on the stack. We also store the old value of `sp`
-    on the stack, too[^4]
+    on the stack, too[^5]
 6.  We jump to the function library and store the address of each slot in it to
     the stack. We skip over any slot that contains a Pokémon with the PID
-    `0xFFFFFFF5`[^5]
+    `0xFFFFFFF5`[^6]
 8.  Lastly, we calculate the address of our script execution area & branch to
     it. If Altaria is marked, we branch to it in ARM mode; otherwise, we stay in
     Thumb mode
@@ -129,10 +129,10 @@ On Emerald, it will also call the ROM function `StopCryAndClearCrySongs`. This
 function, as you might expect, prevents the glitch Pokémon's cry from playing on
 the summary screen. This is only done to make it easier to hear the exit code
 sound effect. More importantly, however, we set the value of the glitch
-Pokémon's sprite's `inUse` flag to `0`. Why we do this is rather difficult to
-explain here, but it allows us to stay on the summary screen without crashing.
-This obviates the need for a traditional ACE exit strategy, like opening the
-diploma screen.
+Pokémon's sprite's `inUse` flag to `0`. This is a technique originally developed
+by Mettrich, and allows us to stay on the summary screen after triggering ACE.
+This completely obviates the need for a traditional ACE exit strategy, like
+opening the diploma completion screen.
 
 FR/LG is even more complicated. A common side-effect of grab/swap ACE is the
 generation of bad eggs, often invisible, in the area just after the ACE
@@ -140,7 +140,8 @@ entrypoint. This is because trigger grab/swap ACE causes a pointer called
 `markingComboSprite` in `gStorage` to be overwritten with the same address that
 we jump to in `gPokemonStorage`. When this sprite's `invisible` flag is
 modified, bad eggs result. By restoring the correct value of
-`markingComboSprite` before this can happen, we prevent any egg generation.
+`markingComboSprite` before this can happen, we prevent any egg generation. This
+technique was developed by Adrichu00.
 
 The final step in both games is to restore our previously-stashed register
 values, and then return control back to the main game loop via `BX lr`. In FR/LG
@@ -182,6 +183,12 @@ first: replace the hex writer.
     _any_ ARM instruction into a no-op!
 
 [^3]:
+    Program counter misalignment is typical when using box code payloads, but
+    I see no reason to misalign the `pc` register outside of that. It doesn't
+    affect execution, but it _can_ cause trouble with `pc`-relative calculations
+    if you aren't careful
+
+[^4]:
     These structures are `gSaveBlock1`, `gSaveBlock2`, & `gPokemonStorage`. The
     global pointers to them are stored consecutively in memory, which means it's
     actually possible to dereference all 3 with just 2 instructions:
@@ -197,7 +204,7 @@ first: replace the hex writer.
     meaning that our scripts can be executed from anywhere in the PC without
     breaking functionality
 
-[^4]:
+[^5]:
     We store the old value of `sp` not so that we can use it in our scripts, but
     because it makes returning the stack to its pre-ACE state much easier.
     Deallocating all the stack space we reserved for our environment is as
@@ -212,7 +219,7 @@ first: replace the hex writer.
     pushed to the stack, hard code it somewhere, or use a terminator value of
     some sort. None of these options are as elegant as above
 
-[^5]:
+[^6]:
     The reason I do this is to allow the possibility of multi-Pokémon library
     scripts where only the first Pokémon's address is stored. This keeps the
     stack state simple. This is a feature I've yet to take advantage of, but I
