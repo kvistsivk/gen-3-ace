@@ -108,9 +108,6 @@ approach I decided upon was to go back to the box names: if we're not using them
 to store a payload, could we instead use them to hold parameters to our scripts,
 preferably in a human-readable format?
 
-The answer is yes, of course, though the code necessary to do so far from
-compact.
-
 The answer, it turns out, is yes. The code required to do so is far from
 compact, though, and some form of modularization was necessary to prevent script
 sizes from exploding. But by moving the logic for these complicated tasks to
