@@ -53,9 +53,6 @@ Box  8: 2s 3k 2c 3k
 Box  9: u8 3k vg AA
 Box 10: AA AB NA Ys
 Box 11: 5t Rx vA BH
-Box 12: AA AA AA AA
-Box 13: AA AA AA AA
-Box 14: AA AA AA AA
 ```
 ////
 

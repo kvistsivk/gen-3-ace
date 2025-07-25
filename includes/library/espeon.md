@@ -60,8 +60,6 @@ Box  9: AE cA AA AA
 Box 10: AA Bc 8w AA
 Box 11: 0S AN CM GM
 Box 12: AA gA AA AA
-Box 13: AA AA AA AA
-Box 14: AA AA AA AA
 ```
 /////
 
