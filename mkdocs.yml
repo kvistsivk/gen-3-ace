@@ -1,5 +1,7 @@
 site_name: Generation 3 ACE
 site_url: https://kvistsivk.github.io/gen-3-ace/
+repo_name: kvistsivk/gen-3-ace
+repo_url: https://github.com/kvistsivk/gen-3-ace/
 theme:
   name: material
   favicon: assets/favicon.png
