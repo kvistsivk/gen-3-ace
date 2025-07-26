@@ -51,6 +51,7 @@ nav:
       - Reset box names: scripts/general/reset-box-names.md
       - Set ObjectEvent script pointer: scripts/general/set-objectevent-script-pointer.md
       - Toggle music on/off: scripts/general/toggle-music-on-off.md
+      - Toggle wild encounters on/off: scripts/general/toggle-wild-encounters-on-off.md
     - Player manipulation:
       - Read SID: scripts/player/read-sid.md
       - Change TID/SID: scripts/player/change-tid-sid.md
