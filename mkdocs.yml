@@ -67,6 +67,7 @@ nav:
       - Read EVs: scripts/pokemon/read-evs.md
       - Read IVs: scripts/pokemon/read-ivs.md
       - Read OT SID: scripts/pokemon/read-ot-sid.md
+      - Read raw data: scripts/pokemon/read-raw-data.md
       - Change OT name: scripts/pokemon/change-ot-name.md
       - Swap OT gender: scripts/pokemon/swap-ot-gender.md
       - Change level: scripts/pokemon/change-level.md
