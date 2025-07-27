@@ -11,3 +11,8 @@
 ## Jul 26, 2025
 
 -   Fixed error in script: "Read daycare egg PID"
+
+## Jul 27, 2025
+
+-   Fixed error in script: "Fill case with perfect Pokéblocks"
+-   Added script: "Read raw data"
