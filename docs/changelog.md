@@ -7,3 +7,7 @@
 ## Jul 25, 2025
 
 -   Added script: "Toggle wild encounters on/off"
+
+## Jul 26, 2025
+
+-   Fixed error in script: "Read daycare egg PID"
