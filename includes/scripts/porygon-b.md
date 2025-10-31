@@ -27,7 +27,7 @@ AE 6C
                 boxLoopCoda:
 01 35           ADD     r5, #1
 0D 2D           CMP     r5, #13
-CC D9           BLS     porygon2A.boxLoop
+CC D9           BLS     porygonA.boxLoop
 A1 08           LSR     r1, r4, #2
 09 D3           BCC     return
 09 30           ADD     r0, #9

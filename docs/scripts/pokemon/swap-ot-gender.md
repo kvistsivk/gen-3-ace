@@ -4,6 +4,7 @@ Swaps the gender of the OT trainer for the Pokémon in box 1, slot 1. All this
 affects is the color of the OT name.
 
 /// pokemon | Aipom ["SwapOtGen"]
+    open: true
 
 //// tab | :octicons-cpu-24: ARM assembly
 ``` { .arm_v4 .annotate linenums="1" }

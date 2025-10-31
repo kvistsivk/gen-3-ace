@@ -42,7 +42,7 @@ flowchart TD
     D[WriteBoxName]
     E[WriteBoxNameMulti]
     F[WriteBoxNamePrefixed]
-    G[WriteBoxnameStats]
+    G[WriteBoxNameStats]
 
     B --> A
     C --> B

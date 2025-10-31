@@ -1,8 +1,8 @@
 # Force egg PID
 
-Functions very similarly to my "Reseed RNG" script, except it also sets
-`vblankCounter2` at the same time. This is mostly useless; I'm using it to help
-test out methods for RNGing Emerald egg PIDs.
+Functions very similarly to the `ReseedRng` Togetic, except it also sets
+`vblankCounter2` in addition to `gRngValue`. This is mostly useless; I'm using
+it to help test out methods for (potentially) RNGing Emerald egg PIDs.
 
 Emerald only.
 
