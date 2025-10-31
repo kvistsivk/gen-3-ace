@@ -10,7 +10,7 @@ useful for RNG manipulation, useless otherwise.
 ``` { .arm_v4 .annotate linenums="1" }
 00 20           MOV     r0, #0
 00 46           NOP
-01 21           MOV     r1, #0
+01 21           MOV     r1, #1
 05 E0           B       #14
 CC D9 E7 D9     .byte   "Rese"
 D9 D8 CC E2     .byte   "edRn"
