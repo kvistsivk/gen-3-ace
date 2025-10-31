@@ -85,6 +85,8 @@ nav:
       - Respawn Southern Island Lati: scripts/static-encounters/respawn-southern-island-lati.md
       - Respawn Deoxys: scripts/static-encounters/respawn-deoxys.md
       - Respawn starters: scripts/static-encounters/respawn-starters.md
+    - Odd/weird/useless:
+      - Force egg PID: scripts/odd/force-egg-pid.md
   - Data tables:
     - Pokémon: data/pokemon.md
     - Pokémon struct fields: data/pokemon-struct-fields.md
