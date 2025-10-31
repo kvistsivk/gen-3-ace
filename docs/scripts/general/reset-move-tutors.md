@@ -55,6 +55,8 @@ F8 D5           BPL     moveLoop
 CC E7 E8 CE     .byte   "RstT"
 E9 E8 E3 E6     .byte   "utor"
 E7 FF 02 02     .byte   "s", #0xFF, #0x02, #0x02
+
+                FlagClear:
 BD E6 06 08     .word   #0x0806E6BD
 2D 01           LSL     r5, r5, #4
 00 E0           B       #4
