@@ -3,6 +3,7 @@ require './arm'
 require './box_code'
 require './charset'
 require './core_ext'
+require './lcg'
 require './pk_data'
 
 def copy_to_clipboard(str)

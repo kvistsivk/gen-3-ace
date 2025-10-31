@@ -1,4 +1,3 @@
-
 class Array
   def in_groups_of(number, fill_with = nil, &block)
     if number.to_i <= 0
@@ -28,6 +27,14 @@ end
 
 
 class Integer
+  def to_u32
+    self & 0xFFFFFFFF
+  end
+
+  def to_u16
+    self & 0xFFFF
+  end
+
   def to_bin(width=8)
     self.to_s(2).rjust(width, '0')
   end
