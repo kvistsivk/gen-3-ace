@@ -17,7 +17,7 @@ CA DD D8 FF     .byte   "Pid", #0xFF
 03 9A           LDR     r2, sp.gPokemonStorage
 02 42           NOP
 52 68           LDR     r2, [r2, #4]
-07 9B           LDR     r3, sp.jolteon
+07 9B           LDR     r3, sp.WriteBoxName
 9E 46           CPY     lr, r3
 02 E0           B       #8
 70 4C

@@ -29,7 +29,7 @@ BE 46           CPY     lr, r7
 01 B4           PUSH    { r0 }
 00 20           MOV     r0, #0
 06 BC           POP     { r1, r2 }
-09 9B           LDR     r3, sp.espeon
+09 9B           LDR     r3, sp.WriteBoxNamePrefixed
 9E 46           CPY     lr, r3
 00 F8           BL      lr
 09 E0           B       magnetonC.return

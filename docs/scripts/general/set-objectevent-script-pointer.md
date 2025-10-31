@@ -183,7 +183,7 @@ DB 46           NOP
 CD D9 E8 CD     .byte   "SetS"
 D7 E6 CA E8     .byte   "crPt"
 E6 FF 02 02     .byte   "r", #0xFF, #0x02, #0x02
-05 9A           LDR     r2, sp.eevee
+05 9A           LDR     r2, sp.ReadBoxName
 96 46           CPY     lr, r2
 00 F8           BL      lr
 02 E0           B       #8

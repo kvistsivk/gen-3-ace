@@ -10,7 +10,7 @@ CE D9 E7 E8     .byte   "Test"
 CD D7 E6 DD     .byte   "Scri"
 E4 E8 02 02     .byte   "pt", #0x02, #0x02
 03 22           MOV     r2, #3
-09 9B           LDR     r3, sp.vaporeon
+09 9B           LDR     r3, sp.ReadBoxNameMulti
 9E 46           CPY     lr, r3
 00 E0           B       #4
 A3 A5
@@ -27,7 +27,7 @@ A3 A5
 02 46           CPY     r2, r0
 00 20           MOV     r0, #0
 00 21           MOV     r1, #0
-07 9B           LDR     r3, sp.jolteon
+07 9B           LDR     r3, sp.WriteBoxName
 9E 46           CPY     lr, r3
 00 F8           BL      lr
 00 20           MOV     r0, #0

@@ -16,7 +16,7 @@ C9 E8 CD DD     .byte   "OtSi"
 D8 FF 02 02     .byte   "d", #0xFF, #0x02, #0x02
 03 9A           LDR     r2, sp.gPokemonStorage
 52 89           LDRH    r2, [r2, #10]
-07 9B           LDR     r3, sp.jolteon
+07 9B           LDR     r3, sp.WriteBoxName
 02 E0           B       #8
 BB C6
 00 00

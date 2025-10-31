@@ -38,7 +38,7 @@ FC D5           BPL     zeroLoop
 68 46           CPY     r0, sp
 F7 21           MOV     r1, #0b11110111
 0A 22           MOV     r2, #10
-10 9B           LDR     r3, sp.vaporeon
+10 9B           LDR     r3, sp.ReadBoxNameMulti
 02 E0           B       #8
 00 00
 00 00

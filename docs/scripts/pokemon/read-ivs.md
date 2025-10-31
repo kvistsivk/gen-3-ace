@@ -29,7 +29,7 @@ B6 46           CPY     lr, r6
 27 2D           CMP     r5, #0x27
 F5 D2           BHS     statLoop
 68 46           CPY     r0, sp
-10 99           LDR     r1, sp.umbreon
+10 99           LDR     r1, sp.WriteBoxNameStats
 8E 46           CPY     lr, r1
 00 F8           BL      lr
 06 B0           ADD     sp, #24
