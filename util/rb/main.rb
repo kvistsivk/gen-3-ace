@@ -64,3 +64,7 @@ def ul(pid)
     (ltr + 65).chr
   end
 end
+
+def egg_odds(pid)
+  ((pid >> 16) * 100) / (2 ** 16 - 1)
+end
