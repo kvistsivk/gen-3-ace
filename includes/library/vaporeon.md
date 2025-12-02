@@ -74,11 +74,11 @@ F0 BC 01 BC   00 47 00 00
 +-------+-------------------------------------------+
 | IN    | Function                                  |
 +=======+===========================================+
-| `r0`  | Pointer to array of values to read from   |
+| `r0`  | Pointer to array of values to write to    |
 +-------+-------------------------------------------+
 | `r1`  | Packed numeric base array                 |
 +-------+-------------------------------------------+
-| `r2`  | Number of boxes to write to               |
+| `r2`  | Number of boxes to read from              |
 +-------+-------------------------------------------+
 /////
 
