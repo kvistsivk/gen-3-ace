@@ -73,6 +73,7 @@ nav:
       - Change level: scripts/pokemon/change-level.md
       - Change EVs: scripts/pokemon/change-evs.md
       - Change moveset: scripts/pokemon/change-moveset.md
+      - Teach single move: scripts/pokemon/teach-single-move.md
       - Calculate Hidden Power stats: scripts/pokemon/calculate-hidden-power-stats.md
       - Read daycare egg PID: scripts/pokemon/read-daycare-egg-pid.md
     - Static encounters:
