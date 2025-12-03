@@ -9,7 +9,7 @@ class Lcg
   end
 
   def next_u32
-    self.advance(ADD, MULL)
+    self.advance(ADD, MUL)
 
     @state
   end
