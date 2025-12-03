@@ -6,7 +6,7 @@ it to help test out methods for (potentially) RNGing Emerald egg PIDs.
 
 Emerald only.
 
-/// pokemon | Togetic ["ForceEgg"]
+/// pokemon | Arbok ["ForceEgg"]
     open: true
 
 //// tab | :octicons-cpu-24: ARM assembly
