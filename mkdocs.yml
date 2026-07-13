@@ -44,6 +44,7 @@ nav:
     - Bootstrapping our environment: setup/bootstrapping-our-environment.md
     - Replacing the hex writer: setup/replacing-the-hex-writer.md
     - Function library: setup/function-library.md
+    - Persistence: setup/persistence.md
   - Scripts:
     - General/utility:
       - Reseed RNG: scripts/general/reseed-rng.md
@@ -88,6 +89,7 @@ nav:
       - Respawn starters: scripts/static-encounters/respawn-starters.md
     - Odd/weird/useless:
       - Force egg PID: scripts/odd/force-egg-pid.md
+      - Set interrupt script: scripts/odd/set-interrupt-script.md
   - Data tables:
     - Pokémon: data/pokemon.md
     - Pokémon struct fields: data/pokemon-struct-fields.md
