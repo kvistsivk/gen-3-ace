@@ -1,0 +1,114 @@
+.md-typeset table:not([class]) {
+  display: table;
+
+  th, td {
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+}
+
+.tabbed-labels > label {
+  font-family: 'Fira Code';
+  font-size: smaller !important;
+}
+
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.signature table {
+  th:first-of-type {
+    width: 15%;
+  }
+}
+
+.signature-typed table {
+  th:first-of-type {
+    width: 15%;
+  }
+
+  th:nth-of-type(2) {
+    width: 20%;
+  }
+}
+
+.markings table {
+  th:first-of-type {
+    width: 15%;
+  }
+
+  span.twemoji {
+    vertical-align: middle;
+    font-size: x-small;
+
+    &:only-of-type {
+      margin-left: 0.25rem;
+    }
+
+    &:not(:only-of-type) {
+      margin-right: -0.125rem;
+
+      &:nth-of-type(3) {
+        margin-right: -0.2rem;
+      }
+    }
+  }
+}
+
+.data-table table {
+  tr td:first-child {
+    width: 15%;
+  }
+}
+
+.data-table-2 table {
+  tr td:first-child {
+    width: 15%;
+  }
+
+  tr td:nth-child(2) {
+    width: 15%;
+  }
+}
+
+.address-book {
+  font-size: .64rem;
+
+  table {
+    th:first-of-type {
+      width: 20%;
+    }
+  }
+
+  .tabbed-set {
+    margin-top: 0;
+  }
+
+  .md-typeset__scrollwrap {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .md-typeset__table {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.type-abbreviations {
+  th:first-of-type {
+    width: 15%;
+  }
+
+  th:nth-of-type(2) {
+    width: 35%;
+  }
+
+  th:nth-of-type(3) {
+    width: 15%;
+  }
+
+  th:nth-of-type(4) {
+    width: 35%;
+  }
+}

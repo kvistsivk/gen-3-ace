@@ -1,0 +1,70 @@
+[data-md-color-scheme="default"] {
+  /* --md-code-hl-label-color: #DC9E4A; */
+  --md-code-hl-label-color: hsla(39, 60%, 45%, 1);
+}
+
+[data-md-color-scheme="slate"] {
+  /* --md-code-hl-label-color: #E0B667; */
+  --md-code-hl-label-color: hsla(39, 66%, 64%, 1);
+}
+
+.highlight {
+  /* Instruction hex [Generic] */
+  .g {
+    color: var(--md-code-hl-string-color);
+    font-weight: bold;
+  }
+
+  /* Instruction var [Generic.Emph] */
+  .ge {
+    color: var(--md-code-hl-special-color);
+    font-weight: bold;
+  }
+
+  /* Opcode [Operator.Word] */
+  .ow {
+    color: var(--md-code-hl-constant-color);
+    font-weight: bold;
+  }
+
+  /* Registers [Name.Variable.Global] */
+  .vg {
+    color: var(--md-code-hl-keyword-color);
+    font-weight: bold;
+  }
+
+  /* Labels [Name.Label] */
+  .nl {
+    color: var(--md-code-hl-label-color);
+    font-weight: bold;
+  }
+
+  /* Number literals [Number.Integer, Number.Hex, Number.Bin] */
+  .mi, .mh, .mb {
+    color: var(--md-code-hl-number-color);
+    font-weight: bold;
+  }
+
+  /* Box labels [Generic.Strong] */
+  .gs {
+    color: var(--md-code-hl-name-color);
+    font-weight: bold;
+  }
+
+  /* Box name, even line [String] */
+  .s {
+    color: var(--md-code-hl-string-color);
+    font-weight: bold;
+  }
+
+  /* Box name, odd line [String.Other] */
+  .sx {
+    color: var(--md-code-hl-keyword-color);
+    font-weight: bold;
+  }
+
+  .p, .err {
+    color: var(--md-code-hl-name-color);
+    font-weight: bold;
+  }
+}

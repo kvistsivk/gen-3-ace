@@ -1,0 +1,28 @@
+.mermaid {
+  margin-bottom: 0;
+}
+
+.md-typeset .grid {
+  margin: 0;
+
+  figcaption {
+    margin: -0.5rem 0 0 0;
+    font-size: smaller;
+  }
+}
+
+.pk-game {
+  font-weight: bold;
+
+  .e {
+    color: #009652;
+  }
+
+  .fr {
+    color: #F15C01;
+  }
+
+  .lg {
+    color: #9FDC00;
+  }
+}
