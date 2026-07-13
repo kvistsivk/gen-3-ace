@@ -70,7 +70,7 @@ Let's go over what's happening here step-by-step:
     around a single execution mode
 2.  We push all of our registers other than `sp` & `lr` to the stack. When we
     return to the main game loop, we're going to need these registers to contain
-    the values they had we ACE was first triggered. Storing them in this way
+    the values they had when ACE was first triggered. Storing them in this way
     also allows us to make use of all registers during script execution
 3.  We prepare to jump to some Thumb code by manually calculating a
     `pc`‑relative offset, but note that we also clear the second least
@@ -94,19 +94,19 @@ values & their default values are listed below:
 +---------------+-----------------------------------------------------------+
 | Variable      | Function                                                  |
 +===============+===========================================================+
-| `libraryBox`  | Function library starting slot (box index, 0–13)          |
+| `libraryBox`  | Function library location (box index, 0–13)               |
 +---------------+-----------------------------------------------------------+
-| `librarySlot` | Function library starting slot (slot index, 0–29)         |
+| `librarySlot` | Function library location (slot index, 0–29)              |
 +---------------+-----------------------------------------------------------+
 | `librarySize` | Function library size                                     |
 +---------------+-----------------------------------------------------------+
-| `scriptBox`   | Script execution area starting slot (box index, (0–13)    |
+| `scriptBox`   | Script execution area location (box index, 0–13)          |
 +---------------+-----------------------------------------------------------+
-| `scriptSlot`  | Script execution area starting slot (slot index, (0–29)   |
+| `scriptSlot`  | Script execution area location (slot index, 0–29)         |
 +---------------+-----------------------------------------------------------+
 
-I wouldn't recommend altering with these values unless you really know what
-you're doing.
+I wouldn't recommend altering these values unless you really know what you're
+doing.
 
 ## The epilogue
 
